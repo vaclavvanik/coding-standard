@@ -24,7 +24,6 @@
         <!-- checked by PSR12.ControlStructures.ControlStructureSpacing -->
         <exclude name="PSR2.ControlStructures.ControlStructureSpacing.SpacingAfterOpenBrace"/>
     </rule>
-
     <!-- Force array element indentation with 4 spaces -->
     <rule ref="Generic.Arrays.ArrayIndent"/>
     <!-- Forbid `array(...)` -->
@@ -428,7 +427,6 @@
     <rule ref="SlevomatCodingStandard.Variables.UselessVariable"/>
     <!-- Forbid spaces around square brackets -->
     <rule ref="Squiz.Arrays.ArrayBracketSpacing"/>
-
     <!-- Force array declaration structure -->
     <rule ref="Squiz.Arrays.ArrayDeclaration">
         <!-- Disable arrow alignment -->
@@ -445,19 +443,15 @@
         <exclude name="Squiz.Arrays.ArrayDeclaration.NoCommaAfterLast"/>
         <exclude name="Squiz.Arrays.ArrayDeclaration.NoComma"/>
     </rule>
-
     <!-- Forbid class being in a file with different name -->
     <rule ref="Squiz.Classes.ClassFileName"/>
-
     <!-- Force `self::` for self-reference, force lower-case self, forbid spaces around `::` -->
     <rule ref="Squiz.Classes.SelfMemberReference"/>
-
     <!-- Force phpDoc alignment -->
     <rule ref="Squiz.Commenting.DocCommentAlignment">
         <!-- Allow extra spaces after star, i.e. for indented annotations -->
         <exclude name="Squiz.Commenting.DocCommentAlignment.SpaceAfterStar"/>
     </rule>
-
     <!-- Force rules for function phpDoc -->
     <rule ref="Squiz.Commenting.FunctionComment">
         <!-- Allow `@throws` without description -->
