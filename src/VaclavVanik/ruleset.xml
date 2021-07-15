@@ -577,12 +577,4 @@
         <exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingTraversableTypeHintSpecification"/>
         <exclude name="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingTraversableTypeHintSpecification"/>
     </rule>
-
-    <!-- Exclude: Superfluous naming -->
-    <rule ref="SlevomatCodingStandard.Classes">
-        <!-- Forbid prefix and suffix "Exception" for exception classes -->
-        <exclude name="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming"/>
-        <!-- Forbid prefix and suffix "Interface" for interfaces -->
-        <exclude name="SlevomatCodingStandard.Classes.SuperfluousInterfaceNaming"/>
-    </rule>
 </ruleset>
