@@ -270,6 +270,10 @@
             <property name="spacesCountAfterArrow" value="1"/>
         </properties>
     </rule>
+    <!-- Require commas after the last parameter in function or method call -->
+    <rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInCall"/>
+    <!-- Require commas after the last parameter in function or method declaration -->
+    <rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInDeclaration"/>
     <!-- Require closures not referencing $this be static -->
     <rule ref="SlevomatCodingStandard.Functions.StaticClosure"/>
     <!-- Forbid unused variables passed to closures via `use` -->
