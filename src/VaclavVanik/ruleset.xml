@@ -133,6 +133,15 @@
             </property>
         </properties>
     </rule>
+    <!-- Require one space before constant -->
+    <rule ref="SlevomatCodingStandard.Classes.ConstantSpacing">
+        <properties>
+            <property name="minLinesCountBeforeWithComment" value="1"/>
+            <property name="maxLinesCountBeforeWithComment" value="1"/>
+            <property name="minLinesCountBeforeWithoutComment" value="1"/>
+            <property name="maxLinesCountBeforeWithoutComment" value="1"/>
+        </properties>
+    </rule>
     <!-- Forbid LSB for constants (static::FOO) -->
     <rule ref="SlevomatCodingStandard.Classes.DisallowLateStaticBindingForConstants"/>
     <!-- Forbid more than one constant declared per statement -->
@@ -146,13 +155,22 @@
     </rule>
     <!-- Require usage of ::class instead of __CLASS__, get_class(), get_class($this), get_called_class() and get_parent_class() -->
     <rule ref="SlevomatCodingStandard.Classes.ModernClassNameReference"/>
-    <!-- Require one spaces before parent call use, zero space between parent call and one space after parent call -->
+    <!-- Require one space before parent call use, zero space between parent call and one space after parent call -->
     <rule ref="SlevomatCodingStandard.Classes.ParentCallSpacing">
         <properties>
             <property name="linesCountBefore" value="1"/>
             <property name="linesCountBeforeFirst" value="0"/>
             <property name="linesCountAfter" value="1"/>
             <property name="linesCountAfterLast" value="0"/>
+        </properties>
+    </rule>
+    <!-- Require one space before property -->
+    <rule ref="SlevomatCodingStandard.Classes.PropertySpacing">
+        <properties>
+            <property name="minLinesCountBeforeWithComment" value="1"/>
+            <property name="maxLinesCountBeforeWithComment" value="1"/>
+            <property name="minLinesCountBeforeWithoutComment" value="1"/>
+            <property name="maxLinesCountBeforeWithoutComment" value="1"/>
         </properties>
     </rule>
     <!-- Split method signature to multiline if length > 110 chars -->
