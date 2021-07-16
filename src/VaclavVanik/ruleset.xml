@@ -155,6 +155,12 @@
             <property name="linesCountAfterLast" value="0"/>
         </properties>
     </rule>
+    <!-- Split method signature to multiline if length > 110 chars -->
+    <rule ref="SlevomatCodingStandard.Classes.RequireMultiLineMethodSignature">
+        <properties>
+            <property name="minLineLength" value="110"/>
+        </properties>
+    </rule>
     <!-- Forbid uses of multiple traits separated by comma -->
     <rule ref="SlevomatCodingStandard.Classes.TraitUseDeclaration"/>
     <!-- Require no spaces before trait use, between trait uses and one space after trait uses -->
