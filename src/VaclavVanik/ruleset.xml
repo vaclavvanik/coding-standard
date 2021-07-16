@@ -113,6 +113,26 @@
             <property name="fixable" value="true"/>
         </properties>
     </rule>
+    <!-- Require given class structure -->
+    <rule ref="SlevomatCodingStandard.Classes.ClassStructure">
+        <properties>
+            <property name="groups" type="array">
+                <element value="uses"/>
+                <!-- You don't care about the order among the properties. The same can be done with "properties" shortcut -->
+                <element value="public properties, protected properties, private properties"/>
+                <element value="static properties"/>
+                <!-- Public constants are first but you don't care about the order of protected or private constants -->
+                <element value="public constants"/>
+                <element value="constants"/>
+                <!-- Constructor is first, then magic methods, all public methods, then protected/private methods and others are last -->
+                <element value="constructor"/>
+                <element value="static constructors"/>
+                <element value="magic methods"/>
+                <element value="all public methods"/>
+                <element value="methods"/>
+            </property>
+        </properties>
+    </rule>
     <!-- Forbid LSB for constants (static::FOO) -->
     <rule ref="SlevomatCodingStandard.Classes.DisallowLateStaticBindingForConstants"/>
     <!-- Forbid more than one constant declared per statement -->
@@ -126,6 +146,15 @@
     </rule>
     <!-- Require usage of ::class instead of __CLASS__, get_class(), get_class($this), get_called_class() and get_parent_class() -->
     <rule ref="SlevomatCodingStandard.Classes.ModernClassNameReference"/>
+    <!-- Require one spaces before parent call use, zero space between parent call and one space after parent call -->
+    <rule ref="SlevomatCodingStandard.Classes.ParentCallSpacing">
+        <properties>
+            <property name="linesCountBefore" value="0"/>
+            <property name="linesCountBeforeFirst" value="1"/>
+            <property name="linesCountAfter" value="0"/>
+            <property name="linesCountAfterLast" value="1"/>
+        </properties>
+    </rule>
     <!-- Forbid uses of multiple traits separated by comma -->
     <rule ref="SlevomatCodingStandard.Classes.TraitUseDeclaration"/>
     <!-- Require no spaces before trait use, between trait uses and one space after trait uses -->
