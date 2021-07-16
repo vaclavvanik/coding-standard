@@ -28,4 +28,8 @@
         <exclude name="SlevomatCodingStandard.Classes.SuperfluousInterfaceNaming"/>
         -->
     </rule>
+
+    <!--
+    <rule ref="SlevomatCodingStandard.Classes.DisallowConstructorPropertyPromotion"/>
+    -->
 </ruleset>
